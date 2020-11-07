@@ -1,0 +1,36 @@
+{
+  "properties": {
+    "displayName": "Require a tag (Environment) on resources",
+    "policyType": "Custom",
+    "mode": "Indexed",
+    "description": "Enforces existence of a tag (Environment). Does not apply to resource groups.",
+    "metadata": {
+      "category": "Tags",
+      "createdBy": "995ce916-bc1b-466a-bd97-b3a4612aa73d",
+      "createdOn": "2020-10-05T15:31:34.5297941Z",
+      "updatedBy": null,
+      "updatedOn": null
+    },
+    "parameters": {
+      "tagName": {
+        "type": "String",
+        "metadata": {
+          "displayName": "Tag Name",
+          "description": "Name of the tag, such as 'environment'"
+        }
+      }
+    },
+    "policyRule": {
+      "if": {
+        "field": "[concat('tags[', parameters('tagName'), ']')]",
+        "exists": "false"
+      },
+      "then": {
+        "effect": "deny"
+      }
+    }
+  },
+  "id": "/subscriptions/6b217f24-1b6d-4e29-bc81-b6790ae75b87/providers/Microsoft.Authorization/policyDefinitions/c7b7ab93-a984-425b-a820-9a99e6fbd249",
+  "type": "Microsoft.Authorization/policyDefinitions",
+  "name": "c7b7ab93-a984-425b-a820-9a99e6fbd249"
+}

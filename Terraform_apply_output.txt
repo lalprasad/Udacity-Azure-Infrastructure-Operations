@@ -1,0 +1,78 @@
+
+C:\Udacity\Project 1\Microsoft\Example1>terraform apply example1.plan
+azurerm_managed_disk.test[1]: Creating...
+azurerm_managed_disk.test[0]: Creating...
+azurerm_virtual_network.test: Creating...
+azurerm_availability_set.avset: Creating...
+azurerm_public_ip.test: Creating...
+azurerm_network_security_group.test: Creating...
+azurerm_availability_set.avset: Creation complete after 9s [id=/subscriptions/6b217f24-1b6d-4e29-bc81-b6790ae75b87/resourceGroups/Project1RG/providers/Microsoft.Compute/availabilitySets/avset]
+azurerm_public_ip.test: Creation complete after 9s [id=/subscriptions/6b217f24-1b6d-4e29-bc81-b6790ae75b87/resourceGroups/Project1RG/providers/Microsoft.Network/publicIPAddresses/publicIPForLB]
+azurerm_lb.test: Creating...
+azurerm_managed_disk.test[0]: Still creating... [10s elapsed]
+azurerm_managed_disk.test[1]: Still creating... [10s elapsed]
+azurerm_virtual_network.test: Still creating... [10s elapsed]
+azurerm_network_security_group.test: Still creating... [10s elapsed]
+azurerm_managed_disk.test[0]: Creation complete after 10s [id=/subscriptions/6b217f24-1b6d-4e29-bc81-b6790ae75b87/resourceGroups/Project1RG/providers/Microsoft.Compute/disks/datadisk_existing_0]
+azurerm_managed_disk.test[1]: Creation complete after 10s [id=/subscriptions/6b217f24-1b6d-4e29-bc81-b6790ae75b87/resourceGroups/Project1RG/providers/Microsoft.Compute/disks/datadisk_existing_1]
+azurerm_virtual_network.test: Creation complete after 12s [id=/subscriptions/6b217f24-1b6d-4e29-bc81-b6790ae75b87/resourceGroups/Project1RG/providers/Microsoft.Network/virtualNetworks/acctvn]
+azurerm_subnet.test: Creating...
+azurerm_network_security_group.test: Creation complete after 12s [id=/subscriptions/6b217f24-1b6d-4e29-bc81-b6790ae75b87/resourceGroups/Project1RG/providers/Microsoft.Network/networkSecurityGroups/myNSG]
+azurerm_lb.test: Creation complete after 7s [id=/subscriptions/6b217f24-1b6d-4e29-bc81-b6790ae75b87/resourceGroups/Project1RG/providers/Microsoft.Network/loadBalancers/loadBalancer]
+azurerm_lb_backend_address_pool.test: Creating...
+azurerm_subnet.test: Creation complete after 6s [id=/subscriptions/6b217f24-1b6d-4e29-bc81-b6790ae75b87/resourceGroups/Project1RG/providers/Microsoft.Network/virtualNetworks/acctvn/subnets/acctsub]
+azurerm_network_interface.test[0]: Creating...
+azurerm_network_interface.test[1]: Creating...
+azurerm_lb_backend_address_pool.test: Creation complete after 3s [id=/subscriptions/6b217f24-1b6d-4e29-bc81-b6790ae75b87/resourceGroups/Project1RG/providers/Microsoft.Network/loadBalancers/loadBalancer/backendAddressPools/BackEndAddressPool]
+azurerm_network_interface.test[1]: Creation complete after 5s [id=/subscriptions/6b217f24-1b6d-4e29-bc81-b6790ae75b87/resourceGroups/Project1RG/providers/Microsoft.Network/networkInterfaces/acctni1]
+azurerm_network_interface.test[0]: Creation complete after 10s [id=/subscriptions/6b217f24-1b6d-4e29-bc81-b6790ae75b87/resourceGroups/Project1RG/providers/Microsoft.Network/networkInterfaces/acctni0]
+azurerm_network_interface_backend_address_pool_association.test[0]: Creating...
+azurerm_network_interface_backend_address_pool_association.test[1]: Creating...
+azurerm_linux_virtual_machine.vm[0]: Creating...
+azurerm_linux_virtual_machine.vm[1]: Creating...
+azurerm_network_interface_backend_address_pool_association.test[0]: Creation complete after 2s [id=/subscriptions/6b217f24-1b6d-4e29-bc81-b6790ae75b87/resourceGroups/Project1RG/providers/Microsoft.Network/networkInterfaces/acctni0/ipConfigurations/ipconfig0|/subscriptions/6b217f24-1b6d-4e29-bc81-b6790ae75b87/resourceGroups/Project1RG/providers/Microsoft.Network/loadBalancers/loadBalancer/backendAddressPools/BackEndAddressPool]
+azurerm_network_interface_backend_address_pool_association.test[1]: Creation complete after 2s [id=/subscriptions/6b217f24-1b6d-4e29-bc81-b6790ae75b87/resourceGroups/Project1RG/providers/Microsoft.Network/networkInterfaces/acctni1/ipConfigurations/ipconfig1|/subscriptions/6b217f24-1b6d-4e29-bc81-b6790ae75b87/resourceGroups/Project1RG/providers/Microsoft.Network/loadBalancers/loadBalancer/backendAddressPools/BackEndAddressPool]
+azurerm_linux_virtual_machine.vm[1]: Still creating... [10s elapsed]
+azurerm_linux_virtual_machine.vm[0]: Still creating... [10s elapsed]
+azurerm_linux_virtual_machine.vm[1]: Still creating... [20s elapsed]
+azurerm_linux_virtual_machine.vm[0]: Still creating... [20s elapsed]
+azurerm_linux_virtual_machine.vm[0]: Still creating... [30s elapsed]
+azurerm_linux_virtual_machine.vm[1]: Still creating... [30s elapsed]
+azurerm_linux_virtual_machine.vm[0]: Still creating... [40s elapsed]
+azurerm_linux_virtual_machine.vm[1]: Still creating... [40s elapsed]
+azurerm_linux_virtual_machine.vm[1]: Still creating... [50s elapsed]
+azurerm_linux_virtual_machine.vm[0]: Still creating... [50s elapsed]
+azurerm_linux_virtual_machine.vm[0]: Still creating... [1m0s elapsed]
+azurerm_linux_virtual_machine.vm[1]: Still creating... [1m0s elapsed]
+azurerm_linux_virtual_machine.vm[0]: Still creating... [1m10s elapsed]
+azurerm_linux_virtual_machine.vm[1]: Still creating... [1m10s elapsed]
+azurerm_linux_virtual_machine.vm[0]: Still creating... [1m20s elapsed]
+azurerm_linux_virtual_machine.vm[1]: Still creating... [1m20s elapsed]
+azurerm_linux_virtual_machine.vm[1]: Still creating... [1m30s elapsed]
+azurerm_linux_virtual_machine.vm[0]: Still creating... [1m30s elapsed]
+azurerm_linux_virtual_machine.vm[0]: Still creating... [1m40s elapsed]
+azurerm_linux_virtual_machine.vm[1]: Still creating... [1m40s elapsed]
+azurerm_linux_virtual_machine.vm[0]: Still creating... [1m50s elapsed]
+azurerm_linux_virtual_machine.vm[1]: Still creating... [1m50s elapsed]
+azurerm_linux_virtual_machine.vm[0]: Still creating... [2m0s elapsed]
+azurerm_linux_virtual_machine.vm[1]: Still creating... [2m0s elapsed]
+azurerm_linux_virtual_machine.vm[0]: Still creating... [2m10s elapsed]
+azurerm_linux_virtual_machine.vm[1]: Still creating... [2m10s elapsed]
+azurerm_linux_virtual_machine.vm[0]: Still creating... [2m20s elapsed]
+azurerm_linux_virtual_machine.vm[1]: Still creating... [2m20s elapsed]
+azurerm_linux_virtual_machine.vm[1]: Creation complete after 2m28s [id=/subscriptions/6b217f24-1b6d-4e29-bc81-b6790ae75b87/resourceGroups/Project1RG/providers/Microsoft.Compute/virtualMachines/acctvm1]
+azurerm_linux_virtual_machine.vm[0]: Still creating... [2m30s elapsed]
+azurerm_linux_virtual_machine.vm[0]: Still creating... [2m40s elapsed]
+azurerm_linux_virtual_machine.vm[0]: Still creating... [2m50s elapsed]
+azurerm_linux_virtual_machine.vm[0]: Creation complete after 2m56s [id=/subscriptions/6b217f24-1b6d-4e29-bc81-b6790ae75b87/resourceGroups/Project1RG/providers/Microsoft.Compute/virtualMachines/acctvm0]
+
+Apply complete! Resources: 15 added, 0 changed, 0 destroyed.
+
+The state of your infrastructure has been saved to the path
+below. This state is required to modify and destroy your
+infrastructure, so keep it safe. To inspect the complete state
+use the `terraform show` command.
+
+State path: terraform.tfstate
+
+C:\Udacity\Project 1\Microsoft\Example1>
